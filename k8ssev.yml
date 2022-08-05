@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: messagebrokeredc
+spec:
+  ports:
+  - name: port1
+    port: 8161
+    targetPort: 8161
+  - name: port2
+    port: 9404
+    targetPort: 9404
+  - name: port3
+    port: 61616
+    targetPort: 61616
+  - name: port4
+    port: 5445
+    targetPort: 5445
+  - name: port5
+    port: 5672
+    targetPort: 5672
+  - name: port6
+    port: 1883
+    targetPort: 1883
+  - name: port7
+    port: 61613
+    targetPort: 61613
+  selector:
+    app: messagebrokeredc
+  type: NodePort
